@@ -1,0 +1,11 @@
+.checked{
+    Width: 50rem !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+.Notchecked{
+    text-decoration: line-through;
+    Width: 50rem !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+  }

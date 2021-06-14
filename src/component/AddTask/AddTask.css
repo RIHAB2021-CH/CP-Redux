@@ -1,0 +1,17 @@
+.formbutton {
+margin-left: 30%;
+margin-top: 1rem;
+margin-bottom: 1rem;
+width:30rem;
+border-radius: 5px;
+font-size: 1.324rem;
+}
+.formbutton:hover {
+    cursor:pointer;
+    background-color: rgb(72, 100, 128);
+    color: whitesmoke;
+    box-shadow: 0 0 6px 0;
+    }
+Modal{
+    width: 150rem !important;
+}
