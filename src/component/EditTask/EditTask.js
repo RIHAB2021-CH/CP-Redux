@@ -12,7 +12,7 @@ const EditTask = ({Item}) => {
     const handleChange = (e) => setMyinput(e.target.value);
     
     const dispatch = useDispatch();
-    const edit = (e) => {e.preventDefault();
+    const edit = (e) => {
       dispatch(edited({id: Item.id, description: Myinput}));
       
     };
@@ -27,7 +27,7 @@ const EditTask = ({Item}) => {
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Header closeButton>
+        <Modal.Header className="p-3 mb-2 bg-secondary text-white" closeButton >
           <Modal.Title>Edit item</Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -38,8 +38,8 @@ const EditTask = ({Item}) => {
             onChange={handleChange}
           />
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={() => {
+        <Modal.Footer className="p-3 mb-6  bg-secondary text-white ">
+          <Button variant="light" onClick={() => {
               handleClose();
               setMyinput(Item.description);
             }}
@@ -47,13 +47,13 @@ const EditTask = ({Item}) => {
             Close
           </Button>
           <Button
-            variant="primary"
+            variant="light"
             onClick={() => {
               handleClose();
               edit();
             }}
           >
-            Save Changes
+            Save 
           </Button>
         </Modal.Footer>
       </Modal>

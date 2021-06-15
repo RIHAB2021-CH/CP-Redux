@@ -1,0 +1,16 @@
+.input{
+  
+    width: 1.221rem;
+    height: 1.221rem;
+   
+    background:transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+ 
+  h4{padding-top: 5px;
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 1rem;
+  }
+ 

@@ -20,7 +20,7 @@ const intialState =  [{id:Math.random(),
       ));
       }
       else if (action.type===EDITED){
-        state.map((el) =>
+       return state.map((el) =>
         el.id === action.payload.id ? { ...el, description: action.payload.description } : el
       );
       }

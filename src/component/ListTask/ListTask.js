@@ -9,17 +9,19 @@ import { Container } from "react-bootstrap";
 
 const ListTask = () => {
     const [filter, setfilter] = useState(false);
-
+    const [filterUndone, setfilterUndone] = useState(false);
     const handelFilter = () => setfilter(!filter);
+    const handelFilter1 = () => setfilterUndone(!filterUndone);
     const ListTask = useSelector((state) => state);
     console.log (ListTask)
     return (
         <Container style={{padding:"0 0"}}>
-            <Filter handelFilter={handelFilter} filter={filter} />
+            <Filter handelFilter={handelFilter} handelFilter1={handelFilter1} filterUndone={filterUndone} filter={filter}/>
         <AddTask/>
        <ListGroup className="listprop" >
-             {(filter?ListTask.filter(el=>el.isDone):ListTask).map((task,index) => {
+             {(filter?(filterUndone?ListTask:(ListTask.filter(el=>el.isDone===true))):(filterUndone?ListTask.filter(el=>(el.isDone===false)):ListTask)).map((task,index) => {
         return (<Task Item={task} key={index}/>)
+        
                })}
         </ListGroup>
         </Container>

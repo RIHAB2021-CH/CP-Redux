@@ -1,14 +1,19 @@
 import React from 'react'
-import {Navbar,Button } from 'react-bootstrap';
+import {Navbar,InputGroup,Badge } from 'react-bootstrap';
+import './filter.css'
 
-const Filter = ({handelFilter, filter}) => {
+const Filter = ({handelFilter,handelFilter1}) => {
     return (
 
   <Navbar expand="lg" variant="dark" bg="secondary" style={{ width: '70rem',padding:'1rem 5rem 1rem 5rem',marginLeft:'0%'}}>
-    <Navbar.Brand href="#">My TODO-LIST</Navbar.Brand> 
+    <Navbar.Brand >My TODO-LIST</Navbar.Brand> 
     <Navbar.Collapse className="justify-content-end">
-    <Button variant={filter?"light":"success"} style={{marginLef:'20% !important' }} onClick={handelFilter}>{filter?"All":"ISDONE"}</Button>
-    </Navbar.Collapse>
+      
+    <InputGroup.Checkbox aria-label="Checkbox for following text input" className='input' onChange={handelFilter} /><h4><Badge text="primary" bg="light">Done</Badge></h4>
+    <InputGroup.Checkbox aria-label="Checkbox for following text input" className='input'onChange={handelFilter1} />
+    <h4 ><Badge text="light" bg="light">Undone</Badge></h4>
+ 
+   </Navbar.Collapse>
   </Navbar>
 
         
